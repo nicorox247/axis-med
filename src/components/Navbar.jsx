@@ -33,12 +33,12 @@ export default function Navbar() {
                 {link.label}
                 </a>
             ))}
-            {/* <a
-                href="#"
+            <a
+                href="/coming-soon"
                 className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
             >
                 Apply Now
-            </a> */}
+            </a>
         </nav>
 
         {/* Mobile Hamburger */}
@@ -65,7 +65,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#"
+              href="/coming-soon"
               className="w-full bg-blue-600 text-white px-4 py-2 rounded-md text-center hover:bg-blue-700 transition"
             >
               Apply Now

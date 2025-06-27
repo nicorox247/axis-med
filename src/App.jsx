@@ -114,7 +114,7 @@ function App() {
           <p className="mb-6 max-w-2xl mx-auto text-gray-700">
             Applications for the Fall 2025 AxisMED Fellowship Program will open soon. Express interest to join interdisciplinary teams solving real clinical problems.
           </p>
-          <a href="#" className="bg-white border border-black text-white px-6 py-3 rounded-md hover:bg-sky-200 transition">
+          <a href="/coming-soon" className="bg-white border border-black text-white px-6 py-3 rounded-md hover:bg-sky-200 transition">
             Express Interest
           </a>
         </div>
