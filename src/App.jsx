@@ -2,9 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
 import IconOperations from './assets/operations.svg';
-import IconCurriculum from './assets/curriculum.svg';
+import IconCurriculum from './assets/helix.svg';
 import IconValidation from './assets/validation.svg';
 import IconMetrics from './assets/metrics.svg';
+import MainLogoText from './assets/MainLogo-text.png';
 
 
 
@@ -21,13 +22,16 @@ function App() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-sky-500 via-black to-blue-300 py-24 px-6 text-center text-white">
+      <section className="bg-gradient-to-br from-sky-500 via-black to-blue-300 py-24 px-6 text-center">
         <div className="container mx-auto px-4 pb-24">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
             Translational Medicine. <br className="hidden md:block" />
             Engineering-Based. Nationally Embedded.
           </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
+          {/* <div className="pt-15 pb-15">
+
+          </div> */}
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-400">
             AxisMED is based at Carle Illinois College of Medicine and empowers physician innovators to build clinically validated solutions to real healthcare problems.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
@@ -45,17 +49,35 @@ function App() {
       </section>
 
       {/* About */}
-      <section id="about" className="bg-gray-300 py-20 px-6">
-        <div className="container mx-auto max-w-4xl text-justify space-y-6 pt-15 pb-15">
-          <h2 className="text-2xl font-semibold mb-4">About AxisMED</h2>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            AxisMED is a pre-incubator based at the world’s first engineering-based medical school. We bring together clinical insight, engineering precision, and translational ambition.
-          </p>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            Our vision is to build the leading national platform for student-led clinical innovation by bridging medicine, engineering, and entrepreneurship. AxisMED empowers medical trainees to co-develop and validate technologies that address real-world healthcare problems.
-          </p>
-        </div>
-      </section>
+<section id="about" className="bg-gray-300 py-20 px-6">
+  <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12">
+    
+    {/* Logo Left */}
+    <div
+      className="w-full md:w-1/3 flex justify-center"
+      data-aos="fade-up" 
+      data-aos-delay="200"
+    >
+      <img
+        src={MainLogoText}
+        alt="AxisMED Logo"
+        className="w-full max-w-xs md:max-w-sm object-contain"
+      />
+    </div>
+
+    {/* Text Right */}
+    <div className="w-full md:w-2/3 text-justify space-y-6">
+      <h2 className="text-2xl font-semibold">About AxisMED</h2>
+      <p className="text-lg md:text-xl">
+        AxisMED is a pre-incubator based at the world’s first engineering-based medical school. We bring together clinical insight, engineering precision, and translational ambition.
+      </p>
+      <p className="text-lg md:text-xl">
+        Our vision is to build the leading national platform for student-led clinical innovation by bridging medicine, engineering, and entrepreneurship. AxisMED empowers medical trainees to co-develop and validate technologies that address real-world healthcare problems.
+      </p>
+    </div>
+  </div>
+</section>
+
 
       {/* Core Divisions */}
       <section
@@ -92,7 +114,7 @@ function App() {
           <p className="mb-6 max-w-2xl mx-auto text-gray-700">
             Applications for the Fall 2025 AxisMED Fellowship Program will open soon. Express interest to join interdisciplinary teams solving real clinical problems.
           </p>
-          <a href="#" className="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">
+          <a href="#" className="bg-white border border-black text-white px-6 py-3 rounded-md hover:bg-sky-200 transition">
             Express Interest
           </a>
         </div>
@@ -100,13 +122,13 @@ function App() {
 
       {/* Footer */}
       <footer id="contact" className="text-center py-10 text-sm text-gray-500 bg-white border-t">
-        <p>Carle Illinois College of Medicine • team@axismed.org</p>
+        <p className="text-lg">Carle Illinois College of Medicine • team@axismed.org</p>
         <p>
           <a
             href="https://www.linkedin.com/company/axismedill/"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline"
+            className="underline text-lg"
           >
             LinkedIn
           </a>{" "}
