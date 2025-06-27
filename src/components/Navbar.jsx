@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // optional: uses Lucide icons
-import Logo from '../assets/logo.svg';
+import MainLogo from '../assets/MainLogo.png';
 
 
 export default function Navbar() {
@@ -18,27 +18,27 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center text-xl font-bold text-blue-700">
-        <img src={Logo} alt="AxisMED Logo" className="w-6 h-6 mr-2 animate-spin-slow" />
+        <img src={MainLogo} alt="AxisMED Logo" className="w-6 h-6 mr-2 animate-spin-slow" />
           AxisMED
         </a>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-700">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="hover:text-blue-600 transition"
+            {navLinks.map((link) => (
+                <a
+                key={link.href}
+                href={link.href}
+                className="relative text-gray-700 hover:text-blue-600 transition-all duration-300 tracking-wide font-medium after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 hover:after:w-full after:bg-blue-500 after:transition-all"
+                >
+                {link.label}
+                </a>
+            ))}
+            {/* <a
+                href="#"
+                className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
             >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="#"
-            className="ml-4 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
-          >
-            Apply Now
-          </a>
+                Apply Now
+            </a> */}
         </nav>
 
         {/* Mobile Hamburger */}

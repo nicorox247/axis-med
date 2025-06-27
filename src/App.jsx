@@ -1,14 +1,16 @@
 import { useState } from 'react'
 import './App.css'
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar'
+import IconCurriculum from './assets/curriculum.svg';
+
 
 
 function App() {
   const divisions = [
-    { icon: "🧭", title: "Operations", desc: "Internal logistics & communication" },
-    { icon: "📚", title: "Program/Curriculum", desc: "Training, onboarding, and recruiting" },
-    { icon: "🧪", title: "Clinical Validation", desc: "Problem sourcing & pilot coordination" },
-    { icon: "📊", title: "Internal Validation", desc: "Tracking KPIs and team accountability" },
+    { icon: "🧭", title: "Operations", desc: "Handles logistics, internal systems, and team coordination for smooth execution." },
+    { icon: IconCurriculum, title: "Program/Curriculum", desc: "Leads training, onboarding, and the educational growth of our fellowship teams." },
+    { icon: "🧪", title: "Clinical Validation", desc: "Sources real-world problems and guides clinical pilots alongside physician mentors." },
+    { icon: "📊", title: "Internal Validation", desc: "Tracks KPIs, technical progress, and ensures teams stay on mission and accountable." },
   ];
 
   return (
@@ -17,7 +19,7 @@ function App() {
 
       {/* Hero */}
       <section className="bg-gradient-to-br from-sky-500 via-black to-blue-300 py-24 px-6 text-center text-white">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 pb-24">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Translational Medicine. <br className="hidden md:block" />
             Engineering-Based. Nationally Embedded.
@@ -26,7 +28,7 @@ function App() {
             AxisMED is based at Carle Illinois College of Medicine and empowers physician innovators to build clinically validated solutions to real healthcare problems.
           </p>
           <div className="flex justify-center gap-4 flex-wrap">
-            <a href="#" className="bg-blue-600 text-white px-5 py-3 rounded-md hover:bg-blue-700 transition">
+            {/* <a href="#" className="bg-blue-600 text-white px-5 py-3 rounded-md hover:bg-blue-700 transition">
               Apply for Fellowship
             </a>
             <a href="#" className="border border-blue-600 text-blue-600 px-5 py-3 rounded-md hover:bg-blue-50 transition">
@@ -34,40 +36,51 @@ function App() {
             </a>
             <a href="#" className="underline text-sm mt-3 block text-gray-600">
               Partner With AxisMED
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
 
       {/* About */}
-      <section id="about" className="bg-sky-50 py-20 px-6">
-        <div className="container mx-auto max-w-4xl text-justify space-y-6">
+      <section id="about" className="bg-gray-300 py-20 px-6">
+        <div className="container mx-auto max-w-4xl text-justify space-y-6 pt-15 pb-15">
           <h2 className="text-2xl font-semibold mb-4">About AxisMED</h2>
-          <p>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
             AxisMED is a pre-incubator based at the world’s first engineering-based medical school. We bring together clinical insight, engineering precision, and translational ambition.
           </p>
-          <p>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
             Our vision is to build the leading national platform for student-led clinical innovation by bridging medicine, engineering, and entrepreneurship. AxisMED empowers medical trainees to co-develop and validate technologies that address real-world healthcare problems.
           </p>
         </div>
       </section>
 
       {/* Core Divisions */}
-      <section id="divisions" className="py-20 px-6 bg-white">
-        <div className="container mx-auto">
-          <h2 className="text-2xl font-semibold text-center mb-12">Core Divisions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section
+        id="divisions"
+        className="bg-gradient-to-br from-sky-500 via-black to-blue-300 py-24 px-6 text-white"
+      >
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+            Core Divisions
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-2">
             {divisions.map(({ icon, title, desc }) => (
-              <div key={title} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-                <h3 className="text-lg font-bold mb-2 flex items-center justify-start gap-2">
-                  <span className="text-xl">{icon}</span> {title}
-                </h3>
-                <p className="text-sm text-gray-700">{desc}</p>
+              <div
+                key={title}
+                className="bg-white/20 backdrop-blur border border-white/20 p-10 rounded-2xl shadow-xl hover:scale-[1.03] transition-all duration-300 text-left"
+              >
+                <div className="mb-4">
+                  <img src={icon} alt={`${title} icon`} className="w-10 h-10" />
+                </div>
+                <h3 className="text-2xl font-semibold mb-3">{title}</h3>
+                <p className="text-white/90 leading-relaxed">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* CTA Banner */}
       <section id="fellowship" className="text-center py-20 px-6 bg-blue-50">
