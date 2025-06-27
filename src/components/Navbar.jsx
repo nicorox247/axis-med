@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // optional: uses Lucide icons
+import Logo from '../assets/logo.svg';
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +17,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b shadow-sm">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-xl font-bold text-blue-700">
+        <a href="#" className="flex items-center text-xl font-bold text-blue-700">
+        <img src={Logo} alt="AxisMED Logo" className="w-6 h-6 mr-2 animate-spin-slow" />
           AxisMED
         </a>
 
