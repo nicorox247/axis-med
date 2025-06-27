@@ -1,16 +1,19 @@
 import { useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar'
+import IconOperations from './assets/operations.svg';
 import IconCurriculum from './assets/curriculum.svg';
+import IconValidation from './assets/validation.svg';
+import IconMetrics from './assets/metrics.svg';
 
 
 
 function App() {
   const divisions = [
-    { icon: "🧭", title: "Operations", desc: "Handles logistics, internal systems, and team coordination for smooth execution." },
+    { icon: IconOperations, title: "Operations", desc: "Handles logistics, internal systems, and team coordination for smooth execution." },
     { icon: IconCurriculum, title: "Program/Curriculum", desc: "Leads training, onboarding, and the educational growth of our fellowship teams." },
-    { icon: "🧪", title: "Clinical Validation", desc: "Sources real-world problems and guides clinical pilots alongside physician mentors." },
-    { icon: "📊", title: "Internal Validation", desc: "Tracks KPIs, technical progress, and ensures teams stay on mission and accountable." },
+    { icon: IconMetrics, title: "Clinical Validation", desc: "Sources real-world problems and guides clinical pilots alongside physician mentors." },
+    { icon: IconValidation, title: "Internal Validation", desc: "Tracks KPIs, technical progress, and ensures teams stay on mission and accountable." },
   ];
 
   return (

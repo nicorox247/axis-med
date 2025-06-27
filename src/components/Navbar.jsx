@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center text-xl font-bold text-blue-700">
-        <img src={MainLogo} alt="AxisMED Logo" className="w-6 h-6 mr-2 animate-spin-slow" />
+        <img src={MainLogo} alt="AxisMED Logo" className="w-10 h-6 mr-2" />
           AxisMED
         </a>
 
